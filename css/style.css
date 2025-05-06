@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+/* ?===============> GLOBAL STYLES <=============== */
+:root {
+  --main-color: #e65f78;
+  --sec-color: #6c757d;
+  --main-transition: all 0.5s;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.main-bg {
+  background-color: var(--main-color);
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.max-w500 {
+  max-width: 500px;
+}
+
+.max-w700 {
+  max-width: 700px;
+}
+
+/* ?================> Navbar <===============*/
+.navbar {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 999;
+}
+
+.navbar .nav-item .nav-link {
+  transition: var(--main-transition);
+  text-transform: capitalize;
+  color: #000;
+}
+
+.navbar .nav-item .nav-link:hover {
+  color: var(--main-color);
+}
+
+.navbar .nav-item .active {
+  color: var(--main-color);
+}
+
+/* ?================> Header <===============*/
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/header-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#home h1 {
+  font-size: 3.5rem;
+}
+
+#home h1::after{
+  content: '|';
+  animation: 5s infinite header-animation ;
+}
+
+@keyframes header-animation {
+  0% {content: "|";}
+  3% {content: "D|";}
+  5% {content: "De|";}
+  7% {content: "Dev|";}
+  10% {content: "Deve|";}
+  13% {content: "Devel|";}
+  15% {content: "Develo|";}
+  17% {content: "Develop|";}
+  20% {content: "Developm|";}
+  24% {content: "Developme|";}
+  25% {content: "Developmen|";}
+  27% {content: "Development|";}
+  30% {content: "Development|";}
+  32% {content: "Developmen|";}
+  35% {content: "Developme|";}
+  37% {content: "Develop|";}
+  40% {content: "Develo|";}
+  42% {content: "Devel|";}
+  45% {content: "Deve|";}
+  47% {content: "Dev|";}
+  50% {content: "De|";}
+  52% {content: "Des|";}
+  55% {content: "Desi|";}
+  57% {content: "Desig|";}
+  60% {content: "Design|";}
+  62% {content: "Designe|";}
+  65% {content: "Designer|";}
+  67% {content: "Designer|";}
+  70% {content: "Designe|";}
+  72% {content: "Design|";}
+  75% {content: "Desig|";}
+  77% {content: "Desi|";}
+  80% {content: "Des|";}
+  82% {content: "De|";}
+  85% {content: "Dev|";}
+  87% {content: "Deve|";}
+  90% {content: "Devel|";}
+  92% {content: "Develo|";}
+  95% {content: "Develop|";}
+  97% {content: "Develope|";}
+  100% {content: "Developer|";}
+}
+
+#home .container button {
+  color: #fff;
+  transition: var(--main-transition);
+  font-weight: 600;
+}
+
+#home .container button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+#home .down-icon {
+  width: 25px;
+  height: 40px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 25px;
+  border: 2px solid #fff;
+  animation: scroll ease-in-out 1s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 5px;
+  }
+  100% {
+    bottom: 15px;
+  }
+}
+
+#home .down-icon::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #fff;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* ?================>Fixed icon <===============*/
+.fixed-icon .setting-icon {
+  position: absolute;
+  top: 30%;
+  left: -5px;
+  background-color: RGB(43, 36, 36);
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 5px;
+}
+
+.fixed-icon .up-icon {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: var(--main-color);
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ?================>About <===============*/
+#about ul li {
+  color: inherit;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--sec-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+
+#about ul li:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+/* ? ================>Client <===============*/
+.carousel-indicators {
+  bottom: -36px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 15px;
+  height: 5px;
+  border-radius: 10px;
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
+}
+
+.carousel-indicators .active {
+  width: 20px;
+}
+
+/* ? ================>Portfolio <=============== */
+#portfolio figure{
+  cursor: pointer;
+}
+
+#portfolio figure figcaption {
+  top: 0%;
+  left: 0%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: var(--main-transition);
+}
+
+#portfolio figure:hover figcaption {
+  opacity: 1;
+}
+
+#portfolio figure figcaption .work-details{
+  position: absolute;
+  top: 100%;
+  transition: var(--main-transition);
+}
+
+#portfolio figure:hover figcaption .work-details{
+  top: 35%;;
+}
+
+#portfolio figure img{
+  transition: var(--main-transition);
+}
+
+#portfolio figure:hover img{
+  transform: scale(1.1);
+}
+
+#portfolio .nav-pills .nav-link{
+  color: var(--sec-color);
+  
+}
+
+#portfolio .nav-pills .nav-link.active{
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 50px;
+}
